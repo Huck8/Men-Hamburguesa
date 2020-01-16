@@ -1,0 +1,185 @@
+/*-- CSS --*/
+
+body {
+    font-family: "Lilita One", cursive;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #00cac8;
+    margin: 1em;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 10px 0 15px;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+
+/* Menu */
+
+.main-menu {
+    display: flex;
+    list-style: none;
+}
+
+.burguer {
+    cursor: pointer;
+    width: 40px;
+    margin: 20px auto;
+}
+
+.burguer>div {
+    width: 40px;
+    height: 3px;
+    background: #616067;
+    margin-bottom: 5px;
+}
+
+#menu-toggle,
+.main-menu {
+    display: none;
+}
+
+#menu-toggle:checked+.main-menu {
+    display: block;
+}
+
+.main-menu {
+    background: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    z-index: 100;
+    top: 103px;
+    left: 0;
+    right: 0;
+}
+
+.main-menu li {
+    margin: 15px 0;
+}
+
+.main-menu li a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/* FIN MENU */
+
+.block-list {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    padding: 50px 10px;
+}
+
+.main {
+    flex-direction: column;
+    border: 1px solid tomato;
+}
+
+.item {
+    margin: 20px 0;
+}
+
+.item img {
+    max-width: 100%;
+}
+
+footer {
+    background: #00cac8;
+    color: white;
+}
+
+.bottom {
+    justify-content: center;
+    /* margin: 0 20px; */
+    border: 1px solid lime;
+}
+
+.social ul {
+    display: flex;
+}
+
+.social ul li {
+    display: block;
+    max-width: 50px;
+    padding: 0 13px;
+    margin: 0 5px;
+}
+
+.social ul li i {
+    color: white;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 920px;
+        padding: 0;
+    }
+    .logo img {
+        transistion: all 0.5s linear;
+    }
+    .logo img:hover {
+        max-height: 110px;
+    }
+    .burguer {
+        display: none;
+    }
+    .main-menu {
+        display: flex;
+        background: transparent;
+        position: unset;
+    }
+    .main-menu li {
+        display: block;
+        padding: 0 10px;
+        margin: 0;
+    }
+    .main-menu li a {
+        color: #666;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .main-menu li:hover a {
+        color: #ffb800;
+    }
+    .main {
+        flex-direction: row;
+    }
+    .item {
+        margin: 20px;
+    }
+    .item img {
+        transition: all 0.3 ease;
+    }
+    .item img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
